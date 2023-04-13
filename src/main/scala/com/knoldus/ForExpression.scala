@@ -20,6 +20,17 @@ object ForExpression extends App {
   } yield {
     if (num % 2 == 0) num + 2
   }
+
+  val list = List(2, 56, 8, 4, 3, 7, 9)
+
+  val result3 = for {
+    nm <- list
+  } yield {
+    if (nm % 2 == 0) nm * 0
+    else nm
+  }
+
   println(result)
   println(result2)
+  println(result3)
 }
